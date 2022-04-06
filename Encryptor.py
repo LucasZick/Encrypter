@@ -38,18 +38,18 @@ def Uncrypt(key, text):
 
 if __name__ == "__main__":
     while True:
-        opt = int(input('1 - CRIPTOGRAFAR // 2 - DESCRIPTOGRAFAR // 3 - SAIR  = '))
+        opt = int(input('___________________________________________________'+
+        '\n1 - CRIPTOGRAFAR // 2 - DESCRIPTOGRAFAR // 3 - SAIR\n_'))
         if opt == 1:
             inp = input('Digite o texto a ser criptografado: ')
             retorno = (Encrypt(inp=inp))
-            print(f'FRASE CRIPTOGRAFADA: {retorno[0]}')
-            print(f'KEY DA CRIPTOGRAFIA: {retorno[1]}')
+            print(f'FRASE CRIPTOGRAFADA: {retorno[0]}\nKEY DA CRIPTOGRAFIA: {retorno[1]}')
         elif opt == 2:
             keyUncrypt = input('Cole aqui sua chave de criptografia: ')
             inpUncrypt = input('Cole aqui o seu texto criptografado: ')
-            print(Uncrypt(keyUncrypt,inpUncrypt))
+            print(f'\nTexto original: {Uncrypt(keyUncrypt,inpUncrypt)}')
         else:
-            continue
+            break
 
 
 
